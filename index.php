@@ -3,9 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Registration Form</title>
+        <title>Welcome</title>
         <link href="./assets/css/output.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/248b7d0018.js" crossorigin="anonymous"></script>
+        <script src="./assets/js/script.js"></script>
     </head>
     <body>
         <!-- Header -->
@@ -22,6 +23,7 @@
             </div>
         </div>
 
+        <!-- Main -->
         <main id="main" class="flex flex-col justify-start">
             <section class="flex flex-col container mx-auto my-12">
                 <h2 class="text-2xl font-bold mb-8 ml-12 bg-gray-300 rounded-3xl inline-block p-5 w-max">Registration Steps</h2>
@@ -60,10 +62,12 @@
                     </div>
                 </div>
                 <div class="text-center mt-8">
-                    <a href="registration.html" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-600">Get started</a>
+                    <a href="registration.php" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-600">Get started</a>
                 </div>
             </section>
         </main>
+
+        <!-- Footer -->
         <footer id="footer" class="bg-blue-600">
             <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
                 <img src="./assets/images/footer.svg" alt="footer" />
