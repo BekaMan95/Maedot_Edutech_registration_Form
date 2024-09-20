@@ -123,4 +123,5 @@ function displayConfirmation() {
     data.challenged_status = document.getElementById("challenged-status").value;
     console.log(data);
     alert('Data Submitted successfully!');
+    window.location.replace("successful.php");
 }
