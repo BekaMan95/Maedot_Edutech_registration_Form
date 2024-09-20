@@ -8,94 +8,95 @@
         <script type="text/javascript" src="./assets/js/script.js"></script>
     </head>
     <body>
+        <!-- Header -->
+        <div class="flex items-center justify-center w-full bg-primary-700 text-white px-4 sm:px-8 py-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between w-full lg:w-[70%] px-4 sm:px-8">
+                <div class="flex items-center gap-4">
+                    <span class="flex items-center gap-3">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>9521</span>
+                    </span>
+                    <a href="#" class="decoration-none underline">info@selectmail.edu.et</a>
+                </div>
+                <button class="bg-secondary-500 text-white font-semibold py-2 px-4 flex items-center justify-center rounded-md focus:outline-none w-max mt-3 sm:mt-0">Back to Home</button>
+            </div>
+        </div>
         <div class="flex flex-col items-center justify-center w-full p-8 gap-8">
-            <div id="progress">
+            <div id="progress" class="p-4 text-2xl">
                 Step <span id="current-step">1</span> of 4
             </div>
             <form id="multi-step-form" novalidate>
                 <!-- Step 1: Personal Info -->
                 <div id="step-1" class="active">
                     <h2 class="text-xl font-semibold mb-4">Personal Info</h2>
-                    <div class="progress-bar mb-4 flex space-x-2">
-                        <div class="step-indicator bg-blue-600 text-white py-2 px-4 rounded-lg">Step 1</div>
-                        <div class="step-indicator bg-gray-300 text-gray-700 py-2 px-4 rounded-lg">Step 2</div>
-                        <div class="step-indicator bg-gray-300 text-gray-700 py-2 px-4 rounded-lg">Step 3</div>
-                        <div class="step-indicator bg-gray-300 text-gray-700 py-2 px-4 rounded-lg">Step 4</div>
-                    </div>
                     <form id="personal-info-form">
-                        <div class="mb-4">
-                            <label for="first-name" class="block mb-2 text-sm font-medium text-gray-700">First name*</label>
-                            <input type="text" id="first-name" name="first-name" class="w-full border border-gray-300 rounded-md p-2" placeholder="First name" required>
-                            <span class="error" id="error-first-name"></span>
-                        </div>
-    
-                        <div class="mb-4">
-                            <label for="middle-name" class="block mb-2 text-sm font-medium text-gray-700">Middle name</label>
-                            <input type="text" id="middle-name" name="middle-name" class="w-full border border-gray-300 rounded-md p-2" placeholder="Middle name">
-                            <span class="error" id="error-middle-name"></span>
-                        </div>
-    
-                        <div class="mb-4">
-                            <label for="last-name" class="block mb-2 text-sm font-medium text-gray-700">Last name*</label>
-                            <input type="text" id="last-name" name="last-name" class="w-full border border-gray-300 rounded-md p-2" placeholder="Last name" required>
-                            <span class="error" id="error-last-name"></span>
-                        </div>
-    
-                        <div class="mb-4">
-                            <label for="profile-image" class="block mb-2 text-sm font-medium text-gray-700">Upload Image*</label>
-                            <input type="file" id="profile-image" name="profile-image" class="w-full border border-gray-300 rounded-md p-2" accept=".jpg, .jpeg, .png" required>
-                            <span class="error" id="error-profile-image"></span>
-                        </div>
-    
-                        <div class="mb-6">
-                            <label for="email" class="block mb-2">Email*</label>
-                            <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-md p-2" required>
-                            <span class="error" id="error-email"></span>
-                        </div>
-    
-                        <div class="mb-4">
-                            <label for="username" class="block mb-2 text-sm font-medium text-gray-700">Username*</label>
-                            <input type="text" id="username" name="username" class="w-full border border-gray-300 rounded-md p-2" placeholder="Username" required>
-                            <span class="error" id="error-username"></span>
-                        </div>
-    
-                        <div class="mb-4">
-                            <label for="password" class="block mb-2 text-sm font-medium text-gray-700">Password*</label>
-                            <input type="password" id="password" name="password" class="w-full border border-gray-300 rounded-md p-2" placeholder="Password" required>
-                            <span class="error" id="error-password"></span>
-                        </div>
-    
-                        <div class="mb-4">
-                            <label for="phone-number" class="block mb-2 text-sm font-medium text-gray-700">Phone Number*</label>
-                            <input type="text" id="phone-number" name="phone-number" class="w-full border border-gray-300 rounded-md p-2" placeholder="Phone number" required pattern="\d{10}">
-                            <span class="error" id="error-phone-number"></span>
-                        </div>
-    
-                        <div class="mb-4">
-                            <label for="gender" class="block mb-2 text-sm font-medium text-gray-700">Gender*</label>
-                            <div class="flex space-x-4">
-                                <label for="male" class="inline-flex items-center">
-                                    <input type="radio" id="male" name="gender" value="male" class="form-radio" required> Male
-                                </label>
-                                <label for="female" class="inline-flex items-center">
-                                    <input type="radio" id="female" name="gender" value="female" class="form-radio" required> Female
-                                </label>
+                        <div class="flex items-center gap-8 mb-4 w-full">
+                            <div>
+                                <label for="first-name" class="block mb-2 text-sm font-medium text-gray-700">First name*</label>
+                                <input type="text" id="first-name" name="first-name" class="w-full border border-gray-300 rounded-md p-2" placeholder="First name" required>
+                                <span class="error" id="error-first-name"></span>
                             </div>
-                            <span class="error" id="error-gender"></span>
+        
+                            <div>
+                                <label for="middle-name" class="block mb-2 text-sm font-medium text-gray-700">Middle name</label>
+                                <input type="text" id="middle-name" name="middle-name" class="w-full border border-gray-300 rounded-md p-2" placeholder="Middle name" required>
+                                <span class="error" id="error-middle-name"></span>
+                            </div>
                         </div>
-    
+                        <div class="flex items-center gap-8 mb-4 w-full">
+                            <div>
+                                <label for="last-name" class="block mb-2 text-sm font-medium text-gray-700">Last name*</label>
+                                <input type="text" id="last-name" name="last-name" class="w-full border border-gray-300 rounded-md p-2" placeholder="Last name" required>
+                                <span class="error" id="error-last-name"></span>
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Email*</label>
+                                <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-md p-2" placeholder="Email" required>
+                                <span class="error" id="error-email"></span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-8 mb-4 w-full">
+                            <div>
+                                <label for="username" class="block mb-2 text-sm font-medium text-gray-700">Username*</label>
+                                <input type="text" id="username" name="username" class="w-full border border-gray-300 rounded-md p-2" placeholder="Username" required>
+                                <span class="error" id="error-username"></span>
+                            </div>
+                            <div>
+                                <label for="phone-number" class="block mb-2 text-sm font-medium text-gray-700">Phone Number*</label>
+                                <input type="text" id="phone-number" name="phone-number" class="w-full border border-gray-300 rounded-md p-2" placeholder="Phone number" required pattern="\d{10}">
+                                <span class="error" id="error-phone-number"></span>
+                            </div>
+                        </div>
                         <div class="mb-4">
                             <label for="birthdate" class="block mb-2 text-gray-700">Birthdate*</label>
                             <input type="date" id="birthdate" name="birthdate" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
                             <span class="error" id="error-birthdate"></span>
                         </div>
-    
                         <div class="mb-4">
                             <label for="country" class="block mb-2 text-sm font-medium text-gray-700">Country*</label>
                             <input type="text" id="country" name="country" class="w-full border border-gray-300 rounded-md p-2" placeholder="Country" required>
                             <span class="error" id="error-country"></span>
                         </div>
-    
+                        <div class="mb-4">
+                            <label for="profile-image" class="block mb-2 text-sm font-medium text-gray-700">Upload Image*</label>
+                            <input type="file" id="profile-image" name="profile-image" class="w-full border border-gray-300 rounded-md p-2" accept=".jpg, .jpeg, .png" required>
+                            <span class="error" id="error-profile-image"></span>
+                        </div>
+                        <div class="mb-4">
+                            <label for="gender" class="block mb-2 text-sm font-medium text-gray-700">Gender*</label>
+                            <div class="flex space-x-4">
+                                <input type="radio" id="male" name="gender" value="male" class="form-radio" required>
+                                <label for="male" class="inline-flex items-center">Male</label>
+                                <input type="radio" id="female" name="gender" value="female" class="form-radio" required>
+                                <label for="female" class="inline-flex items-center">Female</label>
+                            </div>
+                            <span class="error" id="error-gender"></span>
+                        </div>
+                        <div class="mb-4">
+                            <label for="password" class="block mb-2 text-sm font-medium text-gray-700">Password*</label>
+                            <input type="password" id="password" name="password" class="w-full border border-gray-300 rounded-md p-2" placeholder="Password" required>
+                            <span class="error" id="error-password"></span>
+                        </div>
                         <div class="button-container mt-6 flex justify-between">
                             <button type="button" id="next-to-step2" class="bg-blue-600 text-white py-2 px-4 rounded-md" onclick="nextStep()">Next</button>
                         </div>
@@ -112,7 +113,7 @@
                         <div class="step-indicator bg-gray-300 text-gray-700 py-2 px-4 rounded-lg">Step 4</div>
                     </div>
                     <form id="education-info-form">
-                        <div class="mb-4">
+                        <div>
                             <label for="education-level" class="block mb-2 text-sm font-medium text-gray-700">Highest level of Education completed*</label>
                             <select id="education-level" name="education-level" class="w-full border border-gray-300 rounded-md p-2" required>
                                 <option value="">Select</option>
@@ -124,13 +125,13 @@
                             <span class="error" id="error-education-level"></span>
                         </div>
     
-                        <div class="mb-4">
+                        <div>
                             <label for="cgpa" class="block mb-2 text-sm font-medium text-gray-700">CGPA*</label>
                             <input type="number" id="cgpa" name="cgpa" class="w-full border border-gray-300 rounded-md p-2" placeholder="CGPA" step="0.01" required>
                             <span class="error" id="error-cgpa"></span>
                         </div>
     
-                        <div class="mb-4">
+                        <div>
                             <label for="institution" class="block mb-2 text-sm font-medium text-gray-700">Institution Name*</label>
                             <input type="text" id="institution" name="institution" class="w-full border border-gray-300 rounded-md p-2" placeholder="Institution Name" required>
                             <span class="error" id="error-institution"></span>
@@ -153,7 +154,7 @@
                         <div class="step-indicator">Step 4</div>
                     </div>
                     <form id="desired-field-form">
-                        <div class="mb-4">
+                        <div>
                             <label for="program-mode">Program Mode*</label>
                             <select id="program-mode" name="program-mode" required>
                                 <option value="">Select</option>
@@ -163,7 +164,7 @@
                             <span class="error" id="error-program-mode"></span>
                         </div>
                         
-                        <div class="mb-4">
+                        <div>
                             <label for="campus">Campus*</label>
                             <select id="campus" name="campus" required>
                                 <option value="">Select</option>
@@ -173,13 +174,13 @@
                             <span class="error" id="error-campus"></span>
                         </div>
     
-                        <div class="mb-4">
+                        <div>
                             <label for="entry-year">Entry Year:</label>
                             <input type="text" id="entry-year" name="entry-year" placeholder="Entry Year" required>
                             <span class="error" id="error-entry-year"></span>
                         </div>
                         
-                        <div class="mb-4">
+                        <div>
                             <label for="field-of-study">Field of Study*</label>
                             <select id="field-of-study" name="field-of-study" required>
                                 <option value="">Select</option>
@@ -190,7 +191,7 @@
                             <span class="error" id="error-field-of-study"></span>
                         </div>
     
-                        <div class="mb-4">
+                        <div>
                             <label for="gat-id">GAT ID (for master's program)</label>
                             <input type="text" id="gat-id" name="gat-id" placeholder="GAT ID (for master's program)">
                             <span class="error" id="error-gat-id"></span>
@@ -213,28 +214,28 @@
                         <div class="step-indicator active">Step 4</div>
                     </div>
                     <form id="emergency-contact-form">
-                        <div class="mb-4">
+                        <div>
                             <label for="emergency-contact-name">Emergency Contact Name*</label>
                             <input type="text" id="emergency-contact-name" name="emergency-contact-name" placeholder="Emergency Contact Name" required>
                         </div>
                         
-                        <div class="mb-4">
+                        <div>
                             <label for="emergency-contact-mobile">Emergency Contact Mobile*</label>
                             <input type="text" id="emergency-contact-mobile" name="emergency-contact-mobile"placeholder="Emergency Contact Mobile" required>
                         </div>
                         
-                        <div class="mb-4">
+                        <div>
                             <label for="emergency-contact-email">Emergency Contact Email*</label>
                             <input type="email" id="emergency-contact-email" name="emergency-contact-email" placeholder="Emergency Contact Email" required>
                         </div>
                         
-                        <div class="mb-4">
+                        <div>
                             <label for="physically-challenged">Are you physically challenged? (disabled)*</label>
                             <input type="radio" id="physically-challenged-yes" name="physically-challenged" value="yes" required> Yes
                             <input type="radio" id="physically-challenged-no" name="physically-challenged" value="no" required> No
                         </div>
     
-                        <div class="mb-4">
+                        <div>
                             <label for="challenged-status">If yes, please describe the nature of your status*</label>
                             <textarea type="text" id="challenged-status" name="challenged-status" placeholder="If yes, please describe the nature of your status"></textarea>
                         </div>
@@ -247,6 +248,12 @@
                 </div>
             </form>
         </div>
+        <!-- Footer -->
+        <footer id="footer" class="bg-blue-600">
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+                <img src="./assets/images/footer.svg" alt="footer" />
+            </div>
+        </footer>
     </body>
     <style>
         .active {
