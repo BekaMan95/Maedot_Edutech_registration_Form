@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="flex flex-col items-center justify-center w-full p-8 gap-8">
-            <div id="progress" class="p-4 text-2xl">
+            <div id="progress" class="text-2xl">
                 Step <span id="current-step">1</span> of 4
             </div>
             <form id="multi-step-form" novalidate>
@@ -106,14 +106,8 @@
                 <!-- Step 2: Educational Background -->
                 <div id="step-2" class="form-step">
                     <h2 class="text-xl font-semibold mb-4">Educational Background</h2>
-                    <div class="progress-bar mb-4 flex space-x-2">
-                        <div class="step-indicator bg-blue-600 text-white py-2 px-4 rounded-lg">Step 1</div>
-                        <div class="step-indicator bg-blue-600 text-white py-2 px-4 rounded-lg">Step 2</div>
-                        <div class="step-indicator bg-gray-300 text-gray-700 py-2 px-4 rounded-lg">Step 3</div>
-                        <div class="step-indicator bg-gray-300 text-gray-700 py-2 px-4 rounded-lg">Step 4</div>
-                    </div>
-                    <form id="education-info-form">
-                        <div>
+                    <form id="education-info-form" class="w-full">
+                        <div class="mb-4">
                             <label for="education-level" class="block mb-2 text-sm font-medium text-gray-700">Highest level of Education completed*</label>
                             <select id="education-level" name="education-level" class="w-full border border-gray-300 rounded-md p-2" required>
                                 <option value="">Select</option>
@@ -124,19 +118,16 @@
                             </select>
                             <span class="error" id="error-education-level"></span>
                         </div>
-    
-                        <div>
+                        <div class="mb-4">
                             <label for="cgpa" class="block mb-2 text-sm font-medium text-gray-700">CGPA*</label>
                             <input type="number" id="cgpa" name="cgpa" class="w-full border border-gray-300 rounded-md p-2" placeholder="CGPA" step="0.01" required>
                             <span class="error" id="error-cgpa"></span>
                         </div>
-    
-                        <div>
+                        <div class="mb-4">
                             <label for="institution" class="block mb-2 text-sm font-medium text-gray-700">Institution Name*</label>
                             <input type="text" id="institution" name="institution" class="w-full border border-gray-300 rounded-md p-2" placeholder="Institution Name" required>
                             <span class="error" id="error-institution"></span>
                         </div>
-    
                         <div class="button-container mt-6 flex justify-between">
                             <button type="button" id="prev-to-step1" class="bg-gray-500 text-white py-2 px-4 rounded-md" onclick="prevStep()">Back</button>
                             <button type="button" id="next-to-step3" class="bg-blue-600 text-white py-2 px-4 rounded-md" onclick="nextStep()">Next</button>
@@ -146,43 +137,34 @@
     
                 <!-- Step 3: Desired Field of Study -->
                 <div id="step-3" class="form-step">
-                    <h2>Desired Field of Study</h2>
-                    <div class="progress-bar">
-                        <div class="step-indicator">Step 1</div>
-                        <div class="step-indicator">Step 2</div>
-                        <div class="step-indicator active">Step 3</div>
-                        <div class="step-indicator">Step 4</div>
-                    </div>
+                    <h2 class="text-xl font-semibold mb-4">Desired Field of Study</h2>
                     <form id="desired-field-form">
-                        <div>
-                            <label for="program-mode">Program Mode*</label>
-                            <select id="program-mode" name="program-mode" required>
+                        <div class="mb-4">
+                            <label for="program-mode" class="block mb-2 text-sm font-medium text-gray-700">Program Mode*</label>
+                            <select id="program-mode" name="program-mode" class="w-full border border-gray-300 rounded-md p-2" required>
                                 <option value="">Select</option>
                                 <option value="full-time">Full-Time</option>
                                 <option value="part-time">Part-Time</option>
                             </select>
                             <span class="error" id="error-program-mode"></span>
                         </div>
-                        
-                        <div>
-                            <label for="campus">Campus*</label>
-                            <select id="campus" name="campus" required>
+                        <div class="mb-4">
+                            <label for="campus" class="block mb-2 text-sm font-medium text-gray-700">Campus*</label>
+                            <select id="campus" name="campus" class="w-full border border-gray-300 rounded-md p-2" required>
                                 <option value="">Select</option>
                                 <option value="main-campus">Main Campus</option>
                                 <option value="satellite-campus">Satellite Campus</option>
                             </select>
                             <span class="error" id="error-campus"></span>
                         </div>
-    
-                        <div>
-                            <label for="entry-year">Entry Year:</label>
-                            <input type="text" id="entry-year" name="entry-year" placeholder="Entry Year" required>
+                        <div class="mb-4">
+                            <label for="entry-year" class="block mb-2 text-sm font-medium text-gray-700">Entry Year:</label>
+                            <input type="text" id="entry-year" name="entry-year" placeholder="Entry Year" class="w-full border border-gray-300 rounded-md p-2" required>
                             <span class="error" id="error-entry-year"></span>
                         </div>
-                        
-                        <div>
-                            <label for="field-of-study">Field of Study*</label>
-                            <select id="field-of-study" name="field-of-study" required>
+                        <div class="mb-4">
+                            <label for="field-of-study" class="block mb-2 text-sm font-medium text-gray-700">Field of Study*</label>
+                            <select id="field-of-study" name="field-of-study" class="w-full border border-gray-300 rounded-md p-2" required>
                                 <option value="">Select</option>
                                 <option value="engineering">Engineering</option>
                                 <option value="medicine">Medicine</option>
@@ -190,59 +172,46 @@
                             </select>
                             <span class="error" id="error-field-of-study"></span>
                         </div>
-    
-                        <div>
-                            <label for="gat-id">GAT ID (for master's program)</label>
-                            <input type="text" id="gat-id" name="gat-id" placeholder="GAT ID (for master's program)">
+                        <div class="mb-4">
+                            <label for="gat-id" class="block mb-2 text-sm font-medium text-gray-700">GAT ID (for master's program)</label>
+                            <input type="text" id="gat-id" name="gat-id" class="w-full border border-gray-300 rounded-md p-2" placeholder="GAT ID (for master's program)">
                             <span class="error" id="error-gat-id"></span>
                         </div>
-    
                         <div class="button-container mt-6 flex justify-between">
-                            <button type="button" id="back-to-step2" onclick="prevStep()">Back</button>
-                            <button type="button" id="next-to-step4" onclick="nextStep()">Next</button>
+                            <button type="button" id="back-to-step2" onclick="prevStep()" class="bg-gray-500 text-white py-2 px-4 rounded-md">Back</button>
+                            <button type="button" id="next-to-step4" onclick="nextStep()" class="bg-blue-600 text-white py-2 px-4 rounded-md">Next</button>
                         </div>
                     </form>
                 </div>
     
                 <!-- Step 4: Emergency Contact -->
                 <div id="step-4" class="form-step">
-                    <h2>Emergency Contact</h2>
-                    <div class="progress-bar">
-                        <div class="step-indicator">Step 1</div>
-                        <div class="step-indicator">Step 2</div>
-                        <div class="step-indicator">Step 3</div>
-                        <div class="step-indicator active">Step 4</div>
-                    </div>
+                    <h2 class="text-xl font-semibold mb-4">Emergency Contact</h2>
                     <form id="emergency-contact-form">
-                        <div>
-                            <label for="emergency-contact-name">Emergency Contact Name*</label>
-                            <input type="text" id="emergency-contact-name" name="emergency-contact-name" placeholder="Emergency Contact Name" required>
+                        <div class="mb-4">
+                            <label for="emergency-contact-name" class="block mb-2 text-sm font-medium text-gray-700">Emergency Contact Name*</label>
+                            <input type="text" id="emergency-contact-name" name="emergency-contact-name" placeholder="Emergency Contact Name" class="w-full border border-gray-300 rounded-md p-2" required>
+                        </div>  
+                        <div class="mb-4">
+                            <label for="emergency-contact-mobile" class="block mb-2 text-sm font-medium text-gray-700">Emergency Contact Mobile*</label>
+                            <input type="text" id="emergency-contact-mobile" name="emergency-contact-mobile"placeholder="Emergency Contact Mobile" class="w-full border border-gray-300 rounded-md p-2" required>
                         </div>
-                        
-                        <div>
-                            <label for="emergency-contact-mobile">Emergency Contact Mobile*</label>
-                            <input type="text" id="emergency-contact-mobile" name="emergency-contact-mobile"placeholder="Emergency Contact Mobile" required>
+                        <div class="mb-4">
+                            <label for="emergency-contact-email" class="block mb-2 text-sm font-medium text-gray-700">Emergency Contact Email*</label>
+                            <input type="email" id="emergency-contact-email" name="emergency-contact-email" placeholder="Emergency Contact Email" class="w-full border border-gray-300 rounded-md p-2" required>
                         </div>
-                        
-                        <div>
-                            <label for="emergency-contact-email">Emergency Contact Email*</label>
-                            <input type="email" id="emergency-contact-email" name="emergency-contact-email" placeholder="Emergency Contact Email" required>
-                        </div>
-                        
-                        <div>
-                            <label for="physically-challenged">Are you physically challenged? (disabled)*</label>
+                        <div class="mb-4">
+                            <label for="physically-challenged" class="block mb-2 text-sm font-medium text-gray-700">Are you physically challenged? (disabled)*</label>
                             <input type="radio" id="physically-challenged-yes" name="physically-challenged" value="yes" required> Yes
                             <input type="radio" id="physically-challenged-no" name="physically-challenged" value="no" required> No
                         </div>
-    
-                        <div>
-                            <label for="challenged-status">If yes, please describe the nature of your status*</label>
-                            <textarea type="text" id="challenged-status" name="challenged-status" placeholder="If yes, please describe the nature of your status"></textarea>
+                        <div class="mb-4">
+                            <label for="challenged-status" class="block mb-2 text-sm font-medium text-gray-700">If yes, please describe the nature of your status*</label>
+                            <textarea type="text" id="challenged-status" name="challenged-status" placeholder="nature of your status" class="w-full border border-gray-300 rounded-md p-2"></textarea>
                         </div>
-    
                         <div class="button-container mt-6 flex justify-between">
-                            <button type="button" id="back-to-step3" onclick="prevStep()">Back</button>
-                            <a href="succesful.html"><button type="button" onclick="displayConfirmation()">Finish</button></a>
+                            <button type="button" id="back-to-step3" onclick="prevStep()" class="bg-gray-500 text-white py-2 px-4 rounded-md">Back</button>
+                            <button type="button" onclick="displayConfirmation()" class="bg-blue-600 text-white py-2 px-4 rounded-md">Finish</button>
                         </div>
                     </form>
                 </div>
