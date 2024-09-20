@@ -17,7 +17,9 @@
                     </span>
                     <a href="#" class="decoration-none underline">info@selectmail.edu.et</a>
                 </div>
-                <button class="bg-secondary-500 text-white font-semibold py-2 px-4 flex items-center justify-center rounded-md focus:outline-none w-max mt-3 sm:mt-0">Back to Home</button>
+                <a href="/">
+                    <button class="bg-secondary-500 text-white font-semibold py-2 px-4 flex items-center justify-center rounded-md focus:outline-none w-max mt-3 sm:mt-0">Back to Home</button>
+                </a>
             </div>
         </div>
         <main class="flex-grow my-28">
@@ -30,8 +32,12 @@
                         <h1 class="text-3xl">Registration completed</h1>
                         <p>You have completed the registration. wait until you hear from us via your Email or Phone number!</p>
                         <div class="flex items-center gap-8">
-                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Go to home page</button>
-                            <button class="bg-gray-500 text-white py-2 px-4 rounded-md">Back</button>
+                            <a href="/">
+                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Go to home page</button>
+                            </a>
+                            <a href="/registration.php">
+                                <button class="bg-gray-500 text-white py-2 px-4 rounded-md">Back</button>
+                            </a>
                         </div>
                     </div>
                 </div>

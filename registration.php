@@ -18,7 +18,9 @@
                     </span>
                     <a href="#" class="decoration-none underline">info@selectmail.edu.et</a>
                 </div>
-                <button class="bg-secondary-500 text-white font-semibold py-2 px-4 flex items-center justify-center rounded-md focus:outline-none w-max mt-3 sm:mt-0">Back to Home</button>
+                <a href="/">
+                    <button class="bg-secondary-500 text-white font-semibold py-2 px-4 flex items-center justify-center rounded-md focus:outline-none w-max mt-3 sm:mt-0">Back to Home</button>
+                </a>
             </div>
         </div>
         <div class="flex flex-col items-center justify-center w-full p-8 gap-8">
