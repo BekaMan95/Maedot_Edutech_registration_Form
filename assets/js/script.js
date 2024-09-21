@@ -4,27 +4,39 @@ let currentStep = 1;
 function nextStep() {
     if (validateForm()) {
         currentStep++;
-        updateStep();
+        updateStep("next");
     }
 }
 
 // Move to the previous step
 function prevStep() {
-    currentStep--;
-    updateStep();
+   if(currentStep > 1) {
+        currentStep--;
+        updateStep("back");
+   }
 }
 
 // Update the form visibility and progress
-function updateStep() {
+function updateStep(stepType) {
     document.getElementById("current-step").innerText = currentStep;
 
-    // Hide all steps
-    const steps = document.querySelectorAll(".form-step");
-    steps.forEach(step => step.classList.remove("active"));
-
-    // Show the current step
-    document.getElementById(`step-${currentStep}`).classList.add("active");
-
+    if(stepType === "next") {
+        // Hide the previous step
+        document.getElementById(`step-${currentStep - 1}`).classList.remove("active");
+        document.getElementById(`step-${currentStep - 1}`).classList.add("form-step");
+    
+        // Show the current step
+        document.getElementById(`step-${currentStep}`).classList.remove("form-step");
+        document.getElementById(`step-${currentStep}`).classList.add("active");
+    }else {
+         // Hide the previous step
+         document.getElementById(`step-${currentStep + 1}`).classList.remove("active");
+         document.getElementById(`step-${currentStep + 1}`).classList.add("form-step");
+     
+         // Show the current step
+         document.getElementById(`step-${currentStep}`).classList.remove("form-step");
+         document.getElementById(`step-${currentStep}`).classList.add("active");
+    }
 }
 
 // Validate the current step form inputs
@@ -79,7 +91,14 @@ function displayConfirmation() {
     data.username = document.getElementById("username").value;
     data.password = document.getElementById("password").value;
     data.phone_number = document.getElementById("phone-number").value;
-    data.gender = document.getElementById("gender").value;
+
+    var ele = document.getElementsByName('gender');
+    for(i = 0; i < ele.length; i++) {
+        if(ele[i].checked) {
+            data.gender = ele[i].value;
+        }
+    }
+
     data.birthdate = document.getElementById("birthdate").value;
     data.country = document.getElementById("country").value;
     data.education_level = document.getElementById("education-level").value;
@@ -93,8 +112,16 @@ function displayConfirmation() {
     data.emergency_contact_name = document.getElementById("emergency-contact-name").value;
     data.emergency_contact_mobile = document.getElementById("emergency-contact-mobile").value;
     data.emergency_contact_email = document.getElementById("emergency-contact-email").value;
-    data.physically_challenged = document.getElementById("physically-challenged").value;
-    data.challenged_status = document.getElementById("challenged-status").value;
+    
+    var ele = document.getElementsByName('physically-challenged');
+    for(i = 0; i < ele.length; i++) {
+        if(ele[i].checked) {
+            data.physically_challenged = ele[i].value;
+        }
+    }
 
-    alert('Data Submitted successfuly!');
+    data.challenged_status = document.getElementById("challenged-status").value;
+    console.log(data);
+    alert('Data Submitted successfully!');
+    window.location.replace("successful.php");
 }
