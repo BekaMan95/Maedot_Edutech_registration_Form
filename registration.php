@@ -130,6 +130,11 @@
                             <input type="text" id="institution" name="institution" class="w-full border border-gray-300 rounded-md p-2" placeholder="Institution Name" required>
                             <span class="error" id="error-institution"></span>
                         </div>
+                        <div class="mb-4">
+                            <label for="document" class="block mb-2 text-sm font-medium text-gray-700">Upload document*</label>
+                            <input type="file" id="document" name="document" class="w-full border border-gray-300 rounded-md p-2" accept=".pdf" required>
+                            <span class="error" id="error-document"></span>
+                        </div>
                         <div class="button-container mt-6 flex justify-between">
                             <button type="button" id="prev-to-step1" class="bg-gray-500 text-white py-2 px-4 rounded-md" onclick="prevStep()">Back</button>
                             <button type="button" id="next-to-step3" class="bg-blue-600 text-white py-2 px-4 rounded-md" onclick="nextStep()">Next</button>
@@ -221,8 +226,10 @@
         </div>
         <!-- Footer -->
         <footer id="footer" class="bg-blue-600">
-            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
-                <img src="./assets/images/footer.svg" alt="footer" />
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between p-4">
+                <img src="./assets/images/logo.svg" alt="footer" />
+                <span class="text-white font-semibold">Copyright © Select College 2024</span>
+                <span class="text-white">Designed by Maedot Tech</span>
             </div>
         </footer>
     </body>

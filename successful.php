@@ -45,8 +45,10 @@
         </main>
         <!-- Footer -->
         <footer id="footer" class="bg-blue-600">
-            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
-                <img src="./assets/images/footer.svg" alt="footer" />
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between p-4">
+                <img src="./assets/images/logo.svg" alt="footer" />
+                <span class="text-white font-semibold">Copyright © Select College 2024</span>
+                <span class="text-white">Designed by Maedot Tech</span>
             </div>
         </footer>
     </body>
